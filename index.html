@@ -107,6 +107,7 @@ font-size:18px;
 </style>
 </head>
 <body>
+<!-- 🎵 AUDIO (ADD YOUR SONG LINK HERE) -->
 <audio id="bgMusic" loop>
   <source src="sitare.mpeg" type="audio/mpeg">
 </audio>
@@ -337,9 +338,9 @@ if(pass.toLowerCase()=="asit"){
 document.getElementById("login").style.display="none";
 document.getElementById("loadingPage").classList.remove("hidden");
 
-// MUSIC START
+// 🎵 MUSIC START (NEW PART)
 let music=document.getElementById("bgMusic");
-music.play().catch(err=>console.log("Autoplay blocked:",err));
+music.play().catch(()=>{console.log("Autoplay blocked")});
 
 startTyping();
 
