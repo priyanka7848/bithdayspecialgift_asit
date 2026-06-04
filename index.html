@@ -111,6 +111,7 @@ font-size:18px;
 <audio id="bgMusic" loop>
   <source src="sitare.mpeg" type="audio/mpeg">
 </audio>
+  
 <div class="container">
 
 <!-- LOGIN PAGE -->
@@ -340,7 +341,9 @@ document.getElementById("loadingPage").classList.remove("hidden");
 
 // 🎵 MUSIC START (NEW PART)
 let music=document.getElementById("bgMusic");
-music.play().catch(()=>{console.log("Autoplay blocked")});
+music.currentTime = 0;
+music.volume = 0.8;
+music.play().catch(()=>console.log("Autoplay blocked"));
 
 startTyping();
 
