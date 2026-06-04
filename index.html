@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Operation Birthday 2026</title>
+
+<style>
+body{
+    margin:0;
+    background:#0a0a0a;
+    color:#00ff66;
+    font-family:Courier New, monospace;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    text-align:center;
+}
+
+.container{
+    max-width:800px;
+    padding:20px;
+}
+
+h1{
+    text-shadow:0 0 15px #00ff66;
+}
+
+button{
+    background:#00ff66;
+    border:none;
+    padding:15px 30px;
+    font-size:18px;
+    cursor:pointer;
+    border-radius:8px;
+    margin-top:20px;
+}
+
+.message{
+    display:none;
+    animation:fadeIn 2s;
+}
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🔒 ARMY DATABASE ACCESS 🔒</h1>
+
+<p id="typing"></p>
+
+<button onclick="startMission()">ACCESS CLASSIFIED FILE</button>
+
+<div class="message" id="msg">
+<h1>🎉 HAPPY BIRTHDAY MY SOLDIER ❤️</h1>
+
+<p>
+Mission Code: 05-JUNE-SPECIAL<br><br>
+
+Dear Love,<br><br>
+
+Har mission ki tarah tum apni zindagi ki har challenge ko himmat se face karte ho.
+Mujhe tum par garv hai. ❤️<br><br>
+
+Tumhari mehnat, discipline aur dedication mujhe har din inspire karti hai.<br><br>
+
+Aaj tumhara birthday hai aur meri dua hai ki
+tumhare saare sapne poore hon,
+har mission successful ho,
+aur tum hamesha muskurate raho. ✨<br><br>
+
+🎖️ STATUS UPDATE 🎖️<br>
+You are loved more than you know.<br><br>
+
+❤️ With Love,<br>
+Priyanka
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+let text =
+"Scanning Military Records... ✓\nVerifying Soldier Identity... ✓\nSpecial Birthday Mission Found... ✓";
+
+let i=0;
+
+function typeWriter(){
+    if(i<text.length){
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter,40);
+    }
+}
+
+typeWriter();
+
+function startMission(){
+    document.getElementById("msg").style.display="block";
+}
+</script>
+
+</body>
+</html>
