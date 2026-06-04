@@ -329,21 +329,24 @@ It was a love letter disguised as one.
 
 <script>
 
+// 🎵 UNLOCK + MUSIC START
 function unlock(){
 
 let pass=document.getElementById("password").value;
 
-if(pass.toLowerCase()=="agentasit"){
+if(pass.toLowerCase()=="asit"){
 
 document.getElementById("login").style.display="none";
 document.getElementById("loadingPage").classList.remove("hidden");
 
+// MUSIC START
+let music=document.getElementById("bgMusic");
+music.play().catch(err=>console.log("Autoplay blocked:",err));
+
 startTyping();
 
 }else{
-
-document.getElementById("error").innerHTML=
-"❌ Access Denied<br>Hint: Agent + His Name";
+document.getElementById("error").innerHTML="❌ Wrong Code<br>Hint: Birthday boy name!";
 }
 }
 
@@ -352,7 +355,7 @@ const messages=[
 "Verifying identity...",
 "Matching memories...",
 "Access Granted...",
-"Welcome, Agent Asit ❤️"
+"Welcome, To Your World My Love ❤️"
 ];
 
 let msgIndex=0;
