@@ -365,11 +365,12 @@ let msgIndex=0;
 function startTyping(){
 
 let box=document.getElementById("typewriter");
+let loading = document.getElementById("loadingPage");
+let slides = document.getElementById("slidesPage");
 
 let interval=setInterval(()=>{
 
 if(msgIndex<messages.length){
-
 box.innerHTML=messages[msgIndex];
 msgIndex++;
 
@@ -379,19 +380,22 @@ clearInterval(interval);
 
 setTimeout(()=>{
 
-document.getElementById("loadingPage").style.display="none";
-document.getElementById("slidesPage").classList.remove("hidden");
+// hide loading
+loading.style.display="none";
+
+// show slides (IMPORTANT FIX)
+slides.classList.remove("hidden");
+slides.style.display="block";
 
 showSlide();
 
-},1500);
+},1000);
 
 }
 
 },1200);
 }
-
-const slides=[
+  const slides=[
 
 {
 title:"Evidence #1",
